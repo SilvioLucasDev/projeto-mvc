@@ -13,6 +13,8 @@ class Format
     public function encodeString($string)
     {
         $procurar = array(">", "<", "'", '"', ";", "=", "+", "-", "&", "$", "%", "and", "And", "AND", "or", "Or", "OR", "OR", "where", "Where", "WHERE", "update", "Update", "UPDATED", "select", "Select", "SELECT", "delete", "Delete", "DELETE", "insert", "Insert", "INSERT", "from", "From", "FROM", "table", "Table", "TABLE", "inner", "Inner", "INNER", "join", "Join", "JOIN", "right", "Right", "RIGHT", "left", "Left", "LEFT", "on", "On", "ON", "group", "Group", "GROUP", "order", "Order", "ORDER", "by", "By", "BY", "drop", "Drop", "DROP");
+        
+        // Show, Data Base, DESC, ASC, DESC, alter, having, IN, NOT, NULL, Distinct, Count, Sum, Min, Max, avg, grant, all, privileges, limit, offset, *, between, USE, ROOT, PASS, SET, values, truncate, if, case, trim, ltrim, rtrim, concat, format, date, year, month, day, hour, minute, second, CREATE
 
         $substituir = array("ma1100r", "m33n00r", "a55p55imp", "a55pDupl@@", "p00ntV11r", "11gu@0l", "m@@11s", "m33n00s", "ecomercial", "c11fr@@o", "p00rc33nto", "@@nnd",  "@@nnD", "@@NND", "00rr", " 00rrR", "00RR", "wh33r33", "Wh33r33", "WH33R33", "upd@@t33", "Upd@@t33", "UPD@@T33", "s33l33ct", "S33l33ct", "S33L33CT", "d33l33t33", "D33l33t33", "D33L33T33", "11ns33rt", "11ns33rT", "11NS33RT", "fr00m", "Fr00m", "FR00M", "t@@bl33", "T@@bl33", "T@@BL33", "11nn33r", "11ne33R", "11NN33R", "j0011n", "J0011n", "J0011N", "r11ght", "R11ght", "R11GHT", "l33ft", "L33ft", "L33FT",  "00n", "00NN", "00N", "gr00up", "Gr00up", "GR00UP", "00rd33r", "00rd33R", "00RD33R", "b11", "BB11", "B11", "dr00p", "Dr00p", "DR00P");
         return $string = str_replace($procurar, $substituir, $string);

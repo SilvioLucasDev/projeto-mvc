@@ -15,19 +15,19 @@ class StsLogin
     {
         // *********************************************************************************
         // ***** TESTE DA CLASSE FORMAT *****
-        // $f = new \Helper\Format();
+        $f = new \Helper\Format();
 
-        // $string = "11222333444455";
-        // echo "STRING: " . $string . "<br><br>";
+        $string = "11222333444455";
+        echo "STRING: " . $string . "<br><br>";
 
-        // $number = 112222333444455;
-        // echo "NUMBER: " . $number . "<br><br>";
+        $number = 112222333444455;
+        echo "NUMBER: " . $number . "<br><br>";
 
-        // var_dump($f->docMask($string, "cnpj"));
+        var_dump($f->docMask($string, "cnpj"));
 
-        // echo "<br>";
+        echo "<br>";
 
-        // var_dump($f->docMask("42949622836"));
+        var_dump($f->docMask("42949622836"));
 
 
         // *********************************************************************************
