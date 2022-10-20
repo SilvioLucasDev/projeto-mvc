@@ -29,7 +29,14 @@ Classes helper criadas:
 # 🛠 Tecnologias utilizadas 
 
 * PHP
+* COMPOSER
 
 # 💬 Objetivo final
 
 O projeto tem como objetivo ser um sistema completo, contendo não somente a estrutura BACK-END mas também o FRONT-END, visando trazer segurança e desempenho aplicando novas funcionalidades com boas práticas.
+
+⚠️ Atenção!
+
+Para utilizar o projeto corretamente é preciso atualizar as informações na página Config.php localizada em "projeto-mvc/core/Config.php".
+
+Dentro da página StsLogin.php localizada em "projeto-mvc/app/sts/Models/StsLogin.php" é possível ver comentários com exemplos de como utilizar as funcionalidades do sistema já implementadas.
