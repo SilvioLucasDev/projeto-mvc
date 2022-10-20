@@ -4,9 +4,9 @@
 
 # 📌 O que é? 
 
-Contém a estrutura de um projeto MVC pronta para uso, com todas as configurações, pastas e classes helper essenciais já criadas.
+Contém a estrutura de um projeto MVC com todas as configurações, pastas e classes helper essenciais.
 
-Configuração de páginas e pastas padrão criadas:
+Configurações de páginas e pastas criadas:
 
 * Login
 * Error 
