@@ -1,0 +1,15 @@
+<?php
+
+if (!defined('URL')) {
+    header("Location: /");
+    exit();
+}
+
+echo "View - Página de login <br><br>";
+
+foreach($this->data['login'] as $login){
+    extract($login);
+    echo "ID:" . $id . "<br>";
+    echo "Nome:" . $nome . "<br>";
+    echo "CPF:" . $cpf . "<br><br>";
+}
