@@ -35,7 +35,7 @@ Classes helper criadas:
 
 O projeto tem como objetivo ser um sistema completo, contendo não somente a estrutura BACK-END mas também o FRONT-END, visando trazer segurança e desempenho aplicando novas funcionalidades com boas práticas.
 
-#⚠️ Atenção!
+# ⚠️ Atenção!
 
 Para utilizar o projeto corretamente é preciso atualizar as informações na página Config.php localizada em "projeto-mvc/core/Config.php".
 
