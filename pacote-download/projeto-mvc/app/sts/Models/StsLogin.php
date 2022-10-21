@@ -14,32 +14,39 @@ class StsLogin
     public function list()
     {
         // *********************************************************************************
+        // ***** TESTE DA CLASSE FORMATCONFING *****
+        // $f = new \Helper\FormatConfig();
+
+        // $string = "sts/Views/error/error-404";
+        // var_dump($f->formatView($string));
+
+        // *********************************************************************************
         // ***** TESTE DA CLASSE FORMAT *****
-        $f = new \Helper\Format();
+        // $f = new \Helper\Format();
 
-        $string = "11222333444455";
-        echo "STRING: " . $string . "<br><br>";
+        // $string = "11222333444455";
+        // echo "STRING: " . $string . "<br><br>";
 
-        $number = 112222333444455;
-        echo "NUMBER: " . $number . "<br><br>";
+        // $number = 112222333444455;
+        // echo "NUMBER: " . $number . "<br><br>";
 
-        var_dump($f->docMask($string, "cnpj"));
+        // var_dump($f->docMask($string, "cnpj"));
 
-        echo "<br>";
+        // echo "<br>";
 
-        var_dump($f->docMask("42949622836"));
+        // var_dump($f->docMask("42949622836"));
 
 
         // *********************************************************************************
         // ***** CHAMA A FUNÇÃO DE LOG *****
         // $this->testeLog();
-   
+
 
         // *********************************************************************************
         // ***** CÓDIGO PARA REALIZAR SELECT *****
-        $pdoSelect = new \Helper\Read();
-        $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
-        return $pdoSelect->getResult();
+        // $pdoSelect = new \Helper\Read();
+        // $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
+        // return $pdoSelect->getResult();
 
         // $result = $pdoSelect->getResult();
         // var_dump($result);
@@ -123,7 +130,7 @@ class StsLogin
         //     'redirect' => '/home/index'                 // CONTROLLER/MÉTODO/PARÂMETRO
         // ];
 
-        // header("location: " . URL . "ErrorController/error");
+        // header("location: " . URL . "login-controller/error");
         // exit;
 
         // return $result;

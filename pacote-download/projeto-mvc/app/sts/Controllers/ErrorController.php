@@ -9,14 +9,12 @@ if (!defined('URL')) {
 
 class ErrorController
 {
-    private array $data;
-
     public function error($code = NULL)
     {
         switch ($code) {
 
             case 404:
-                $loadView = new \Core\ConfigView("adms/Views/alerta/error-404", $this->data);
+                $loadView = new \Core\ConfigView("sts/Views/error/error-404");
                 $loadView->renderAll();
                 break;
 
@@ -27,3 +25,4 @@ class ErrorController
         }
     }
 }
+

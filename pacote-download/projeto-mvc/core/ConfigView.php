@@ -2,27 +2,29 @@
 
 namespace Core;
 
-class ConfigView
+use Helper\FormatConfig;
+
+class ConfigView extends FormatConfig
 {
     private $name;
     private $data;
 
     public function __construct($name, array $data = NULL)
     {
-        $this->name = (string) $name;
+        $this->name = (string) $this->formatView($name);
         $this->data = $data;
     }
 
     // RENDERIZA TODOS OS INCLUDES
     public function renderAll()
     {
-        if (file_exists('app/' . $this->name . '.php')) {
+        if (file_exists('app/' . $this->name . '.phtml')) {
 
-            include 'app/sts/Views/include/header.php';
-            include 'app/sts/Views/include/navbar.php';
-            include 'app/sts/Views/include/menu.php';
-            include 'app/' . $this->name . '.php';
-            include 'app/sts/Views/include/footer.php';
+            include 'app/sts/Views/include/header.phtml';
+            include 'app/sts/Views/include/navbar.phtml';
+            include 'app/sts/Views/include/menu.phtml';
+            include 'app/' . $this->name . '.phtml';
+            include 'app/sts/Views/include/footer.phtml';
         } else {
             $this->locationError();
         }
@@ -31,11 +33,11 @@ class ConfigView
     // NÃO RENDERIZA TODOS OS INCLUDES
     public function renderLogin()
     {
-        if (file_exists('app/' . $this->name . '.php')) {
+        if (file_exists('app/' . $this->name . '.phtml')) {
 
-            include 'app/sts/Views/include/header.php';
-            include 'app/' . $this->name . '.php';
-            include 'app/sts/Views/include/footer.php';
+            include 'app/sts/Views/include/header.phtml';
+            include 'app/' . $this->name . '.phtml';
+            include 'app/sts/Views/include/footer.phtml';
         } else {
             $this->locationError();
         }
@@ -52,10 +54,10 @@ class ConfigView
                 'acao' => 'Erro',
                 'msg' => 'Erro C200: Falha ao carregar a Página: <br> <h1>' . end($name) . '</h1>',
                 'button' => 'Voltar',
-                'redirect' => '/home/index'  // CONTROLLER/MÉTODO/PARÂMETRO
+                'redirect' => '/login-controller/index'  // CONTROLLER/MÉTODO/PARÂMETRO
             ];
 
-        header("location: " . URL . "alerta/alerta");
+        header("location: " . URL . "error-controller/error");
         exit;
     }
 }
