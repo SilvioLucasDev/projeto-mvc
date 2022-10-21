@@ -7,7 +7,7 @@ if (!defined('URL')) {
     exit();
 }
 
-class Login
+class LoginController
 {
     private array $data;
 

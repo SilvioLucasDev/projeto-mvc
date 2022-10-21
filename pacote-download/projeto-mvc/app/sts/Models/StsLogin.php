@@ -123,7 +123,7 @@ class StsLogin
         //     'redirect' => '/home/index'                 // CONTROLLER/MÉTODO/PARÂMETRO
         // ];
 
-        // header("location: " . URL . "alerta/alerta");
+        // header("location: " . URL . "ErrorController/error");
         // exit;
 
         // return $result;
