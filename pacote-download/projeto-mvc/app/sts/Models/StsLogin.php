@@ -13,6 +13,8 @@ class StsLogin
 
     public function list()
     {
+        session_start();
+
         // *********************************************************************************
         // ***** TESTE DA CLASSE FORMATCONFING *****
         // $f = new \Helper\FormatConfig();
@@ -44,9 +46,9 @@ class StsLogin
 
         // *********************************************************************************
         // ***** CÓDIGO PARA REALIZAR SELECT *****
-        // $pdoSelect = new \Helper\Read();
-        // $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
-        // return $pdoSelect->getResult();
+        $pdoSelect = new \Helper\Read();
+        $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
+        return $pdoSelect->getResult();
 
         // $result = $pdoSelect->getResult();
         // var_dump($result);
@@ -120,17 +122,15 @@ class StsLogin
 
 
         // *********************************************************************************
-        // ***** CÓDIGO PARA USAR PÁGINA DE ERRO *****
-        // $_SESSION['error'] =
-        // [
-        //     'destroy_session' => 'S',                   // S, N
-        //     'acao' => 'Sucesso',                        // Sucesso, Erro
-        //     'msg' => 'Usuário ou senha inválidos.',     // Usuário ou senha inválidos.
-        //     'button' => 'Voltar',                       // Voltar, Sair, Login
-        //     'redirect' => '/home/index'                 // CONTROLLER/MÉTODO/PARÂMETRO
-        // ];
-
-        // header("location: " . URL . "login-controller/error");
+        // ***** CÓDIGO PARA USAR PÁGINA DE ERRO DEFAULT *****
+        // $u = new \Helper\Utils;
+        // $u->errorDefault(
+        //     'Erro S400: Erro ao atualizar foto de perfil',
+        //     'Erro',
+        //     'Voltar',
+        //     'login-controller/index',
+        //     'N'
+        // );
         // exit;
 
         // return $result;

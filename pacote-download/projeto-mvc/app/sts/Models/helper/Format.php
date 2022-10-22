@@ -119,7 +119,7 @@ class Format
     {
         $string = $this->onlyNumbers($string);
 
-        if ($type == 'cnpj' || $type == 'CNPJ') {
+        if (strtolower($type) == 'cnpj') {
             $string = $this->maskAllData($string, '##.###.###/####-##');
             return substr_replace($string, '***.***/****', 3, -3);
         } else {
@@ -145,20 +145,6 @@ class Format
             return $string = ($symbol == TRUE ? 'R$ ' : '') . number_format($string, 2, ",", ".");
         } else {
             return $string = ($symbol == TRUE ? '$ ' : '') . number_format($string, 2, ".", ",");
-        }
-    }
-
-    /********************************************************************/
-    // VALIDA EMAIL RETORNA TRUE OU FALSE
-    public function valEmail($email)
-    {
-        // REMOVE OS CARACTERES E DEIXA O E-MAIL VÁLIDO
-        // $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        } else {
-            return false;
         }
     }
 }

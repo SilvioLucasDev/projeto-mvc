@@ -5,37 +5,36 @@ if (!defined('URL')) {
     exit();
 }
 
-echo "Página erro default";
-exit;
+session_start();
 
-if (isset($_SESSION['error'])) { ?>
+echo "Página erro default";
+// exit;
+
+if (isset($_SESSION['error'])) {
+    extract($_SESSION['error'])
+?>
 
     <?php
-    echo"
-            <p>" . $_SESSION['error']['msg'] . "</p>
+    echo "
+            <p>" . $msgError . "</p>
 
-            <a href='". URL ."". $_SESSION['error']['redirect'] ."'>
-                " . $_SESSION['error']['button'] . " 
+            <a href='" . URL . "" . $redirect . "'>
+                " . $nameButton . " 
             </a>
         ";
     ?>
 
+    <!-- <img src="<?php echo URLASSETS ?>img/" width="180" height="130" /> -->
 
-    <img src="<?php echo URLASSETS ?>img/" width="180" height="130" />
-
-    <p><?php echo $_SESSION['error']['acao'] ?>!</p>
-
-
-
+    <p><?php echo $action ?>!</p>
 
 <?php
-    if ($_SESSION['error']['destroy_session'] == 'S') {
+    if (strtolower($sessionDestroy) == 's') {
         session_destroy();
     }
 
     unset($_SESSION['error']);
-
 } else {
-    header("location: " . URL . "error/error/404");
+    header("location: " . URL . "error-conroller/error/404");
 }
 ?>

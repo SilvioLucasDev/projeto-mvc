@@ -48,16 +48,14 @@ class ConfigView extends FormatConfig
     {
         $name = explode("/", $this->name);
 
-        $_SESSION['error'] =
-            [
-                'destroy_session' => 'N',
-                'acao' => 'Erro',
-                'msg' => 'Erro C200: Falha ao carregar a Página: <br> <h1>' . end($name) . '</h1>',
-                'button' => 'Voltar',
-                'redirect' => '/login-controller/index'  // CONTROLLER/MÉTODO/PARÂMETRO
-            ];
-
-        header("location: " . URL . "error-controller/error");
+        $u = new \Helper\Utils;
+        $u->errorDefault(
+            'Erro C200: Falha ao carregar a Página: <br> <h1>' . end($name) . '</h1>',
+            'Erro',
+            'Voltar',
+            'login-controller/index',
+            'N'
+        );
         exit;
     }
 }
