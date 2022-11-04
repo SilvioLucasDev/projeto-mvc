@@ -31,7 +31,7 @@ class ConfigView extends FormatConfig
     }
 
     // NÃO RENDERIZA TODOS OS INCLUDES
-    public function renderLogin()
+    public function render()
     {
         if (file_exists('app/' . $this->name . '.phtml')) {
 

@@ -15,6 +15,8 @@ class StsLogin
     {
         session_start();
 
+        return "Olá mundo!";
+
         // *********************************************************************************
         // ***** TESTE DA CLASSE FORMATCONFING *****
         // $f = new \Helper\FormatConfig();
@@ -46,9 +48,9 @@ class StsLogin
 
         // *********************************************************************************
         // ***** CÓDIGO PARA REALIZAR SELECT *****
-        $pdoSelect = new \Helper\Read();
-        $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
-        return $pdoSelect->getResult();
+        // $pdoSelect = new \Helper\Read();
+        // $pdoSelect->fullRead("SELECT id, nome, cpf FROM usuarios WHERE id=:id", "id=63");
+        // return $pdoSelect->getResult();
 
         // $result = $pdoSelect->getResult();
         // var_dump($result);

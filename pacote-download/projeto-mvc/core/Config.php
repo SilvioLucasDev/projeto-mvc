@@ -3,7 +3,7 @@
 
     // DEFINE URL's
     define('URL', 'http://localhost/projeto-mvc/');
-    define('URLASSETS', 'http://localhost/projeto-mvc/app/assets/');
+    define('URLASSETS', 'http://localhost/projeto-mvc/assets/');
 
     define('CONTROLLER', 'LoginController');
     define('METHOD', 'index');
